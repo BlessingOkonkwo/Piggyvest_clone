@@ -65,6 +65,13 @@ body header nav .nav-div .nav-links .hover-dd a img {
 body .top-sec {
   padding: 120px 16px 10px;
 }
+body .top-sec .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 body .top-sec .top-div {
   margin: 0 0 90px;
   padding: 0 15px;
@@ -111,6 +118,17 @@ body .top-sec .img-group .dots {
 }
 body .security {
   padding: 90px 16px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body .security .security-img {
+  margin: 0 0 40px;
+}
+body .security .security-text p {
+  margin: 10px 0 25px;
 }
 body .security a {
   font-weight: 500;
@@ -122,12 +140,16 @@ body .cards {
 }
 body .cards .row {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 body .cards .four-ways {
   padding: 0 15px;
   padding-bottom: 40px;
   margin: 0 74px 30px;
+  max-width: 350px;
 }
 body .cards .four-ways p {
   margin: 18px 0 26px;
@@ -137,7 +159,7 @@ body .cards .card {
   margin: 0 63px 45px;
   padding: 30px;
   border-radius: 20px;
-  max-width: 400px;
+  max-width: 350px;
 }
 body .cards .card:hover {
   background-color: #faf7f7;
@@ -162,11 +184,38 @@ body .investify {
   text-align: center;
   padding: 20px 16px 90px;
 }
+@media screen and (min-width: 900px) {
+  body .investify {
+    display: flex;
+  }
+  body .investify .investify-imgs {
+    flex: 0 0 40%;
+    padding: 0 15px;
+    text-align: right;
+    justify-content: center;
+  }
+}
+body .investify .invest-text-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 900px) {
+  body .investify .invest-text-div {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
 body .investify #invest-circle {
   position: absolute;
   left: 55px;
   top: 170px;
   z-index: -10;
+}
+@media screen and (min-width: 900px) {
+  body .investify #invest-circle {
+    left: -10px;
+  }
 }
 body .investify #invest-dots {
   position: absolute;
@@ -174,9 +223,34 @@ body .investify #invest-dots {
   z-index: -10;
   top: 30px;
 }
+@media screen and (min-width: 900px) {
+  body .investify #invest-dots {
+    right: -20px;
+  }
+}
 body .investify #invest-text {
   margin-top: 70px;
   padding: 0 15px;
+  max-width: 530px;
+}
+@media screen and (min-width: 900px) {
+  body .investify #invest-text {
+    text-align: left;
+    padding: 0 15px;
+    align-self: center;
+    justify-self: center;
+  }
+}
+body .investify #invest-text a {
+  color: #7913e5;
+  font-weight: 700;
+  background-image: linear-gradient(180deg, transparent 70%, #f6dbf8 0);
+  transition: all 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+}
+body .investify #invest-text a:hover {
+  background-size: 100% 100%;
 }
 body .investify #invest-text #percent {
   background-color: #f7f0ff;
@@ -191,55 +265,125 @@ body .investify #invest-text h2 {
   font-size: 45px;
   letter-spacing: 0;
 }
+@media screen and (min-width: 900px) {
+  body .investify #invest-text h2 {
+    font-size: 56px;
+  }
+}
 body .investify #invest-text #invest-p {
   margin: 25px 0;
 }
 body .saver {
   text-align: center;
   color: #ffffff;
-  background-color: #0D60D8;
+}
+@media screen and (min-width: 900px) {
+  body .saver {
+    display: flex;
+    flex: 1;
+  }
 }
 body .saver #blue {
   background-color: #0D60D8;
   padding: 80px 16px;
-  margin: 0 9px;
+}
+@media screen and (min-width: 900px) {
+  body .saver #blue {
+    flex: 60%;
+    text-align: left;
+  }
 }
 body .saver #blue p {
   margin: 15px 5px 0;
-  max-width: 450px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 900px) {
+  body .saver #blue p {
+    margin: 15px 0 0;
+  }
 }
 body .saver #blue a {
   display: block;
   margin: 45px 170px 0 170px;
   font-weight: 700;
 }
+@media screen and (min-width: 900px) {
+  body .saver #blue a {
+    margin: 45px 10px 0 0;
+  }
+}
 body .saver #blue a img {
   position: relative;
   top: 10px;
   margin-right: 10px;
 }
+body .saver #background {
+  width: 100%;
+  background-image: url(../images/saver.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  padding: 0 15px;
+}
+@media screen and (min-width: 900px) {
+  body .saver #background {
+    height: auto;
+    max-width: 450px;
+  }
+}
 body .testimonials {
   padding: 100px 16px;
 }
-body .testimonials .container .row .mil {
+@media screen and (min-width: 900px) {
+  body .testimonials .container .row {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+body .testimonials .container .row .mil-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 900px) {
+  body .testimonials .container .row .mil-div {
+    justify-content: start;
+    text-align: left;
+  }
+}
+body .testimonials .container .row .mil-div .mil {
   margin: 0 0 70px;
   padding: 0 15px;
+  max-width: 500px;
 }
-body .testimonials .container .row .mil p {
+body .testimonials .container .row .mil-div .mil p {
   margin: 13px 0 11px;
 }
 body .testimonials .container .row .boxes {
   padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 900px) {
+  body .testimonials .container .row .boxes {
+    flex: 60%;
+  }
 }
 body .testimonials .container .row .boxes .box {
   max-width: 420px;
   padding: 11px 17px 24px 18px;
   margin-bottom: 10px !important;
-  margin-right: auto;
-  margin-left: auto;
   background-color: #f9f9f9;
+}
+@media screen and (min-width: 900px) {
+  body .testimonials .container .row .boxes .box {
+    margin-right: 30px;
+  }
 }
 body .testimonials .container .row .boxes .box > p {
   font-size: 12px;
@@ -265,15 +409,36 @@ body .testimonials .container .row .boxes .box h6 {
 body .featured {
   padding: 65px 16px;
 }
-body .featured a {
+@media screen and (min-width: 900px) {
+  body .featured .row {
+    display: flex;
+  }
+}
+body .featured .row a {
   margin: 0 25px;
 }
-body .featured a div {
-  padding: 40px 0px 0px;
+body .featured .row a div {
   vertical-align: bottom;
 }
-body .featured a div img {
+body .featured .row a div img {
   vertical-align: bottom;
+}
+body .featured .row .column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  body .featured .row div:nth-child(1) {
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 900px) {
+  body .featured .row div:nth-child(2) {
+    padding: 0 15px 0 65px;
+  }
 }
 body footer {
   padding: 80px 16px 10px;
@@ -283,6 +448,13 @@ body footer {
 body footer .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (min-width: 900px) {
+  body footer .row .column {
+    flex: 1;
+    width: 100%;
+  }
 }
 body footer h5 {
   font-size: 13px;
@@ -298,9 +470,15 @@ body footer a:hover {
   color: #0d60d8;
 }
 body footer .column {
+  width: 100%;
   margin: 0 0 30px;
   padding: 0 15px;
-  flex: 50%;
+  flex: 33.333333%;
+}
+@media screen and (min-width: 900px) {
+  body footer .column {
+    max-width: 20%;
+  }
 }
 body footer .audit {
   flex: 100%;
@@ -313,8 +491,19 @@ body footer .audit #audit-img {
 body footer #contact {
   flex: 100%;
 }
+@media screen and (min-width: 900px) {
+  body footer #contact {
+    text-align: right;
+    flex: 33.333333%;
+  }
+}
 body footer .socials {
   display: flex;
+}
+@media screen and (min-width: 900px) {
+  body footer .socials {
+    justify-content: right;
+  }
 }
 body footer .socials a {
   margin-right: 10px;
@@ -329,6 +518,7 @@ body footer .about {
 }
 body footer .about #about {
   margin-bottom: 25px;
+  padding: 0 4rem;
 }
 body footer .about #last-p {
   color: #083e9e;
@@ -349,13 +539,6 @@ body h3 {
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-weight: 700;
   line-height: normal;
-}
-body #background {
-  background-image: url(../images/saver.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 400px;
 }
 body a {
   text-decoration: none;
@@ -423,13 +606,73 @@ body .db {
 body .dfc {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 body .tac {
   text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+  body .top-sec .row {
+    flex-direction: row;
+  }
+  body .top-sec .row .column {
+    padding: 0 15px;
+    flex: 50%;
+  }
+  body .top-sec .row .img-group {
+    margin-left: 15px;
+  }
+  body .top-sec .row .top-div {
+    text-align: left;
+  }
+  body .security {
+    flex-direction: row;
+  }
+  body .security div {
+    padding: 0 15px;
+  }
+  body .security .security-img {
+    text-align: right;
+    flex: 40%;
+    margin-right: 10px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+  body .security .security-img img {
+    margin-left: 200px;
+  }
+  body .security .security-text {
+    text-align: left;
+  }
+  body .cards .row .four-ways {
+    margin: 0 auto;
+    margin-left: 0;
+    flex: 100%;
+    max-width: initial;
+  }
+}
+@media screen and (min-width: 900px) and (min-width: 1098px) {
+  body .cards .row .four-ways {
+    text-align: left;
+    max-width: 350px;
+    flex: none;
+  }
+}
+@media screen and (min-width: 900px) {
+  body .cards .row .card {
+    text-align: left;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px auto;
+  }
+}
+@media screen and (min-width: 900px) {
+  body .blue-content {
+    margin-right: 28%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
